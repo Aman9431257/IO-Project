@@ -1,0 +1,25 @@
+{
+  "name": "io-project",
+  "version": "1.0.0",
+  "description": "IO Project is a browser-based, real-time multiplayer general knowledge game designed for fast, fun, and competitive learning.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aman9431257/IO-Project.git"
+  },
+  "keywords": [
+    "io",
+    "game",
+    "knowledge",
+    "learn"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aman9431257/IO-Project/issues"
+  },
+  "homepage": "https://github.com/Aman9431257/IO-Project#readme"
+}
