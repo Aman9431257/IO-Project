@@ -14,12 +14,13 @@
     "io",
     "game",
     "knowledge",
-    "learn"
+    "learn",
+    "fast"
   ],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Aman9431257/IO-Project/issues"
   },
-  "homepage": "https://github.com/Aman9431257/IO-Project#readme"
+  "homepage": "https://github.com/Aman9431257/IO-Project"
 }
