@@ -14,7 +14,9 @@ IO Project is a browser-based, real-time multiplayer general knowledge game desi
 - Added ESM module support to server configuration
 - Fixed TypeScript configuration for both client and server
 - Installed missing dependencies (express, colyseus, tsx)
+- Moved tsx from devDependencies to dependencies for production compatibility
 - Configured deployment settings for Replit autoscale
+- Created comprehensive .gitignore file
 
 ## Project Architecture
 
