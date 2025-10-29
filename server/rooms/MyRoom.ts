@@ -1,15 +1,15 @@
 import { Room } from "colyseus";
 
 export class MyRoom extends Room {
-  onCreate(options) {
+  onCreate(options: any) {
     console.log("Room created:", this.roomId);
   }
 
-  onJoin(client, options) {
+  onJoin(client: any, options: any) {
     console.log("Client joined:", client.sessionId);
   }
 
-  onLeave(client, consented) {
+  onLeave(client: any, consented: any) {
     console.log("Client left:", client.sessionId);
   }
 
