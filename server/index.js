@@ -10,14 +10,11 @@ const gameServer = new Server({
     server: createServer(app),
 });
 
-// Register a Colyseus room
 gameServer.define("my_room", MyRoom);
 
-// Serve static files or use an API route if you want
 app.get("/", (req, res) => {
     res.send("Colyseus server is running!");
 });
 
-// Start server
 gameServer.listen(port);
 console.log(`🚀 Colyseus server is listening on ws://localhost:${port}`);
