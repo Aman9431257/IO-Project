@@ -1,4 +1,5 @@
-import { Room } from "colyseus";
+import pkg from "colyseus";
+const { Room } = pkg;
 
 export class MyRoom extends Room {
   onCreate(options) {

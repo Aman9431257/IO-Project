@@ -1,9 +1,10 @@
 import express from "express";
 import { createServer } from "http";
-import { Server } from "colyseus";
+import pkg from "colyseus";
+const { Server } = pkg;
 import { MyRoom } from "./rooms/MyRoom.js";
 
-const port = Number(process.env.PORT) || 2567;
+const port = Number(process.env.PORT) || 3000;
 const app = express();
 
 const gameServer = new Server({

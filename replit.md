@@ -5,16 +5,20 @@ IO Project is a browser-based, real-time multiplayer general knowledge game desi
 
 **Current State:** Development environment running successfully on Replit
 
-## Recent Changes (October 29, 2025)
+## Recent Changes (October 30, 2025)
 
-### Migration from Vercel to Replit
+### Server Conversion to JavaScript (October 30, 2025)
+- Converted server from TypeScript to pure JavaScript ES6 modules
+- Removed all TypeScript dependencies from server (typescript, tsx, ts-node, @types/*)
+- Updated server to use Node.js directly instead of TypeScript runtime
+- Changed server port from 2567 to 3000 for Replit compatibility
+- Fixed CommonJS/ESM compatibility for Colyseus imports
+- Created Server workflow running on port 3000
+
+### Migration from Vercel to Replit (October 29, 2025)
 - Downgraded Next.js from v16 to v15.5.6 for Replit compatibility (v16 was causing bus errors)
 - Updated React from v19 to v18.3 for stability
 - Configured Next.js dev server to bind to 0.0.0.0:5000 for Replit proxy compatibility
-- Added ESM module support to server configuration
-- Fixed TypeScript configuration for both client and server
-- Installed missing dependencies (express, colyseus, tsx)
-- Moved tsx from devDependencies to dependencies for production compatibility
 - Configured deployment settings for Replit autoscale
 - Created comprehensive .gitignore file
 
@@ -46,9 +50,9 @@ IO Project is a browser-based, real-time multiplayer general knowledge game desi
 #### Server (Backend)
 - **Game Server:** Colyseus 0.15.0
 - **Web Framework:** Express 4.18.2
-- **Language:** TypeScript 5 (ESM)
-- **Runtime:** tsx for TypeScript execution
-- **Port:** 2567 (default Colyseus port, configurable via PORT env var)
+- **Language:** JavaScript ES6 (ESM)
+- **Runtime:** Node.js (native)
+- **Port:** 3000 (configurable via PORT env var)
 
 ### Key Configuration Changes for Replit
 
@@ -57,10 +61,10 @@ IO Project is a browser-based, real-time multiplayer general knowledge game desi
    - Configured via `-p 5000 -H 0.0.0.0` flags
    - Required for Replit's proxy to work correctly
 
-2. **Server ESM Support:**
-   - Added `"type": "module"` to server/package.json
-   - Using `tsx` instead of `ts-node` for better ESM compatibility
-   - Fixed TypeScript type annotations in Room handlers
+2. **Server ES6 Module Configuration:**
+   - Added `"type": "module"` to server/package.json for native ES6 module support
+   - Using Node.js directly (no TypeScript compilation needed)
+   - Fixed CommonJS/ESM compatibility for Colyseus imports
 
 3. **Deployment Configuration:**
    - Target: Autoscale (stateless frontend)
